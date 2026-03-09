@@ -1,0 +1,50 @@
+body {
+    background-color: #FFDAB9;
+    background: radial-gradient(circle, #FFDAB9, #FFB8A3);
+    display: block;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+p {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+#continueButton,
+#choice1Button,
+#choice2Button {
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #E88B5E;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+#continueButton:hover,
+#choice1Button:hover,
+#choice2Button:hover {
+    background-color: #FF9D7D;
+}
+
+#continueButton,
+#choice1Button,
+#choice2Button {
+    display: inline-block;
+}
+
+body > button {
+    margin: 5px;
+}
