@@ -20,31 +20,50 @@ p {
     margin: 0 auto;
 }
 
-#continueButton,
-#choice1Button,
-#choice2Button {
-    padding: 12px 30px;
+button {
+    padding: 14px 32px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
-    background-color: #E88B5E;
-    color: #333;
-    transition: background-color 0.3s;
-}
-
-#continueButton:hover,
-#choice1Button:hover,
-#choice2Button:hover {
-    background-color: #FF9D7D;
-}
-
-#continueButton,
-#choice1Button,
-#choice2Button {
+    border-radius: 8px;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     display: inline-block;
+    margin: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
-body > button {
-    margin: 5px;
+button:hover {
+    background: linear-gradient(135deg, #FF8E53, #FF6B6B);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::before {
+    width: 300px;
+    height: 300px;
 }
