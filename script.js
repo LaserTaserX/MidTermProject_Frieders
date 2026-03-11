@@ -134,6 +134,8 @@ hideAllButtons()
 
 setText('"Of course! Anything you need!" (as your friend shoots you a look)', "You decide to help the hot lady. After helping her, you find out that she was cosplaying as a homeless person, and was actually a very wealthy woman. She bestows upon you a braincell, which you then shove down your friend's throat, which gives him the ability to make his own decisions. He thanks you for your help, and you both live happily ever after.")
 
+changeImage("./images/braincell.png")
+
 showButtons([restartButton])
 
 }
@@ -145,6 +147,8 @@ function leaveHer(){
 hideAllButtons()
 
 setText('"Get away from me, skank!"', "You rudely refuse to help her and drive off into the distance. After a couple miles, your rear tire pops and you get out of the car to change it. Just then, you hear a scream from your friend. You look up and hear him gargle blood, look at you in fear, and die. You have only a second to react, as the pretty lady-turned-scary-hag jumps out from behind the car and shoves a knife in your throat.", '"Shoulda helped me, brat!"')
+
+changeImage("./images/death_lady.png")
 
 showButtons([restartButton])
 
@@ -158,6 +162,8 @@ hideAllButtons()
 
 setText('"Mom, Dad, I am a homo-I made him do it!"', "Your friend tells his parents that you made him take the medicine. They are completley against him going to the doctor, and banish him from the familiy. They tell you the only apology they will accept is if he takes the disease back into his body and lets natural selection run its course. He can't decide and it is your decision yet again. What do you decide?")
 
+changeImage("./images/sad.png")
+
 showButtons([runParentsButton, obeyParentsButton])
 
 }
@@ -169,6 +175,8 @@ function runParents(){
 hideAllButtons()
 
 setText("You tell him it was the only way for you to survive, and your parents are in the complete wrong. He believes you, and you tell him to put it all behind him, and focus on the future. He is reassured, and now you guys start your adventure to find him some competence!")
+
+changeImage("./images/happy.png")
 
 showButtons([braincellQuestButton])
 
