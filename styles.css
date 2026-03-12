@@ -67,3 +67,10 @@ button:active::before {
     width: 300px;
     height: 300px;
 }
+
+#randomColorButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}

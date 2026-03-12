@@ -27,6 +27,8 @@ let sideDecisionButton = document.getElementById("sideDecisionButton")
 
 let restartButton = document.getElementById("restartButton")
 
+let randomColorButton = document.getElementById("randomColorButton")
+
 
 // STORE ALL BUTTONS
 let allButtons = [
@@ -83,6 +85,20 @@ function changeImage(file){
 image.src = file
 
 }
+
+// Generate random color
+function getRandomColor(){
+let letters = '0123456789ABCDEF';
+let color = '#';
+for(let i = 0; i < 6; i++){
+color += letters[Math.floor(Math.random() * 16)];
+}
+return color;
+}
+
+// Hide all buttons on page load, show only start button
+hideAllButtons();
+showButtons([startButton]);
 
 
 // START STORY
@@ -190,6 +206,8 @@ hideAllButtons()
 
 setText("You tell him to obey his parents and hope to reconcile. You trust in his immune system, and he takes the medicine. After he takes the disease, you know wait in discomfort for several days. After a week, you call him. Nothing. You drive over, frantic, and bang on the door. He opens the door, and you hug him in relief. He then just spontaneously dies.", '"I guess I should not have listened to his parents..."')
 
+changeImage("./images/death.png")
+
 showButtons([restartButton])
 
 }
@@ -216,6 +234,8 @@ hideAllButtons()
 
 setText('"What they do not know will not hurt them"', "You and your friend sneak off somewhere and take the medicine. He almost immediatly improves in condition and feels much better. He is a little unsure, but after some encouraging words from you, he puts the whole situation behind him and begins the journey with you to find the braincell he so desperately needs.")
 
+changeImage("./images/secret.png")
+
 showButtons([braincellQuestButton])
 
 }
@@ -227,6 +247,8 @@ function sideDecision(){
 hideAllButtons()
 
 setText("You tell him to not take the medicine, and tough it out, as it probably will not develop into anything dangerous anyway.", "The next day, you recieve news that he developed Lukemia and a brain eating cancer. He does not live to see the next hour.")
+
+changeImage("./images/stoopid.png")
 
 showButtons([restartButton])
 
@@ -261,6 +283,13 @@ secretStickButton.addEventListener("click", secretStick)
 sideDecisionButton.addEventListener("click", sideDecision)
 
 restartButton.addEventListener("click", restart)
+
+randomColorButton.addEventListener('click', function(){
+document.body.style.backgroundColor = getRandomColor();
+});
+randomColorButton.addEventListener('dblclick', function(){
+randomColorButton.style.color = getRandomColor();
+});
 
 
 // Start with only Start button visible
